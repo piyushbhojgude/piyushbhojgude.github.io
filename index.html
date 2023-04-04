@@ -1,25 +1,97 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ASCII Art</title>
-  <style>
-    body {
-      background-color: black;
-      color: white;
-    }
-  </style>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
-  <script>
-    window.onload = function() {
-      var asciiArt = '|   ****************************************************************************   |\n|   ___________________________________________________________________________    |\n|   |                                                                         \\    |\n|   |    ***************************  DAY 2  *****************************     |   |\n|   |                                                                          |   |\n|   ****************************************************************************   |\n|   #                                                                          #   |\n|   #                    "Marriage is like debugging:                          #   |\n|   #           you spend most of the time finding and fixing the bugs"        #   |\n|   #                                                                          #   |\n|   ****************************************************************************   |\n|   |                                                                          |   |\n|   |   Date:        May 4, 2023                                               |   |\n|   |   Time:        11:00 AM onwards                                          |   |\n|   |   Venue:       18.5268348984126,                                         |   |\n|   |                73.74657605545909                                         |   |\n|   |   Event:       #include<main.event>                                      |   |\n|   |                                                                          |   |\n|   |   Dress Code:  Any dress that makes you look your best,                  |   |\n|   |                but please put on atleast one complete outfit :D          |   |\n|   |                                                                          |   |\n|   |   RSVP:        Join our event and add some `def` to our `class` :P       |   |\n|   |                And if you\'re not able to make it,                        |   |\n|   |                please raise an `exception` as soon as possible.          |   |\n|   |                We don\'t want to encounter any `runtime errors`!          |   |\n|   |                                                                          |   |\n|   |_________________________________________________________________________/    |\n|                                                                                  |\n|    P.S: With love as our guiding principle and your abundant support we are      |\n|    confident our merge will be conflict-free and deployment will be successful!  |\n|                                                                                  |\n\\__________________________________________________________________________________/\n                                    \\_______/\n                                    ( o   o )\n                                     \\ ~~~ /\n                                      |---|\n                                  ___/     \\___\n                                 /             \\';
-      var typed = new Typed('#ascii-art', {
-        strings: [asciiArt],
-        typeSpeed: 20
-      });
-    };
-  </script>
+	<title>ASCII Art</title>
+	<style>
+		body {
+			background-color: black;
+			color: white;
+			font-family: monospace;
+			font-size: 16px;
+			line-height: 1.2;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+		}
+
+		.ascii-art {
+			display: inline-block;
+			margin: auto;
+			padding: 50px;
+			text-align: left;
+		}
+	</style>
 </head>
 <body>
-  <pre id="ascii-art"></pre>
+	<div class="ascii-art">
+		<pre>
+       _________________________________________________________________________________
+      /                                                                                 \
+      |                         We are excited to invite you                             |
+      |                to the ultimate merge of two code repositories:                   |
+      |                               Nikita & Piyush                                    |
+      |           { Like two peas in a pod, or rather, two threads in a process }        |
+      |                                                                                  |
+      |    _________________________________________________________________________     |
+      |   |                                                                         \    |
+      |   |    ***************************  DAY 1  *****************************     |   |
+      |   |                                                                          |   |
+      |   |   Date:        May 3, 2023                                               |   |
+      |   |   Time:        4:00 PM onwards                                           |   |
+      |   |   Venue:       18.5268348984126,                                         |   |
+      |   |                73.74657605545909                                         |   |
+      |   |   Event:       #include<halad.event>                                     |   |
+      |   |                #include<sangeet.event>                                   |   |
+      |   |                                                                          |   |
+      |   |   Agenda:      We know that testing is an integral part of any project.  |   |
+      |   |                So, come join us for an evening of fun, food,             |   |
+      |   |                and some rigorous testing of our dance moves.             |   |
+      |   |                                                                          |   |
+      |   ****************************************************************************   |
+      |   #                                                                          #   |
+      |   #          "You can't debug love, but you can compile it with joy"         #   |
+      |   #                                                                          #   |
+      |   ****************************************************************************   |
+      |   ___________________________________________________________________________    |
+			|   ****************************************************************************   |
+			|   ___________________________________________________________________________    |
+			|   |                                                                         \    |
+			|   |    ***************************  DAY 2  *****************************     |   |
+			|   |                                                                          |   |
+			|   ****************************************************************************   |
+			|   #                                                                          #   |
+			|   #                    "Marriage is like debugging:                          #   |
+			|   #           you spend most of the time finding and fixing the bugs"        #   |
+			|   #                                                                          #   |
+			|   ****************************************************************************   |
+			|   |                                                                          |   |
+			|   |   Date:        May 4, 2023                                               |   |
+			|   |   Time:        11:00 AM onwards                                          |   |
+			|   |   Venue:       18.5268348984126,                                         |   |
+			|   |                73.74657605545909                                         |   |
+			|   |   Event:       #include<main.event>                                      |   |
+			|   |                                                                          |   |
+			|   |   Dress Code:  Any dress that makes you look your best,                  |   |
+			|   |                but please put on atleast one complete outfit :D          |   |
+			|   |                                                                          |   |
+			|   |   RSVP:        Join our event and add some `def` to our `class` :P       |   |
+			|   |                And if you're not able to make it,                        |   |
+			|   |                please raise an `exception` as soon as possible.          |   |
+			|   |                We don't want to encounter any `runtime errors`!          |   |
+			|   |                                                                          |   |
+			|   |_________________________________________________________________________/    |
+			|                                                                                  |
+			|    P.S: With love as our guiding principle and your abundant support we are      |
+			|    confident our merge will be conflict-free and deployment will be successful!  |
+			|                                                                                  |
+			\__________________________________________________________________________________/
+			                                    \_______/
+			                                    ( o   o )
+			                                     \ ~~~ /
+			                                      |---|
+			                                  ___/     \___
+			                                 /             \
+		</pre>
+	</div>
 </body>
 </html>
