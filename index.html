@@ -1,6 +1,23 @@
-<body>
-  <div id="ascii-art-container">
-    <pre id="ascii-art">
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ASCII Art with Typing Effect</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+	<style type="text/css">
+		pre {
+			font-family: 'Courier New', Courier, monospace;
+			font-size: 18px;
+			line-height: 1.2;
+			text-align: center;
+			padding: 50px 0;
+			margin: 0;
+		}
+	</style>
+</head>
+<body style="background-color: black; color: white;">
+	<pre id="ascii-art"></pre>
+	<script>
+		const asciiArt = String.raw`
  _________________________________________________________________________________
 /                                                                                 \
 |                         We are excited to invite you                             |
@@ -48,10 +65,10 @@
 |   |   Dress Code:  Any dress that makes you look your best,                  |   |
 |   |                but please put on atleast one complete outfit :D          |   |
 |   |                                                                          |   |
-|   |   RSVP:        Join our event and add some `def` to our `class` :P       |   |
+|   |   RSVP:        Join our event and add some 'def' to our 'class' :P       |   |
 |   |                And if you're not able to make it,                        |   |
-|   |                please raise an `exception` as soon as possible.          |   |
-|   |                We don't want to encounter any `runtime errors`!          |   |
+|   |                please raise an 'exception' as soon as possible.          |   |
+|   |                We don't want to encounter any 'runtime errors'!          |   |
 |   |                                                                          |   |
 |   |_________________________________________________________________________/    |
 |                                                                                  |
@@ -63,32 +80,16 @@
                                     ( o   o )
                                      \ ~~~ /
                                       |---|
-                                  ___/     \___
-                                 /             \
+                                  ___/     \___`;
 
-    </pre>
-  </div>
+		const options = {
+			strings: [asciiArt],
+			typeSpeed: 15,
+			cursorChar: '',
+			contentType: 'html'
+		};
 
-  <style>
-    #ascii-art {
-      color: green;
-      font-size: 24px;
-      white-space: pre-wrap;
-      text-align: center;
-      opacity: 0;
-      animation: type 10s linear forwards;
-    }
-
-    @keyframes type {
-      from {
-        opacity: 0;
-        transform: translateX(-100%);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-  </style>
+		const typed = new Typed('#ascii-art', options);
+	</script>
 </body>
+</html>
