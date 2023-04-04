@@ -1,25 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>ASCII Art Typing Effect</title>
-  <style>
-    body {
-      background-color: black;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-  </style>
-</head>
 <body>
-  <pre id="ascii-art"></pre>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
-  <script>
-    // Get the ASCII art text
-    const asciiArt = `
+  <div id="ascii-art-container">
+    <pre id="ascii-art">
  _________________________________________________________________________________
 /                                                                                 \
 |                         We are excited to invite you                             |
@@ -49,9 +30,6 @@
 |   ****************************************************************************   |
 |   ___________________________________________________________________________    |
 |   |                                                                         \    |
-|   ****************************************************************************   |
-|   ___________________________________________________________________________    |
-|   |                                                                         \\    |
 |   |    ***************************  DAY 2  *****************************     |   |
 |   |                                                                          |   |
 |   ****************************************************************************   |
@@ -70,29 +48,47 @@
 |   |   Dress Code:  Any dress that makes you look your best,                  |   |
 |   |                but please put on atleast one complete outfit :D          |   |
 |   |                                                                          |   |
-|   |   RSVP:        Join our event and add some \`def\` to our \`class\` :P   |   |
+|   |   RSVP:        Join our event and add some `def` to our `class` :P       |   |
 |   |                And if you're not able to make it,                        |   |
-|   |                please raise an \`exception\` as soon as possible.          |   |
-|   |                We don't want to encounter any \`runtime errors\`!          |   |
+|   |                please raise an `exception` as soon as possible.          |   |
+|   |                We don't want to encounter any `runtime errors`!          |   |
 |   |                                                                          |   |
 |   |_________________________________________________________________________/    |
 |                                                                                  |
 |    P.S: With love as our guiding principle and your abundant support we are      |
 |    confident our merge will be conflict-free and deployment will be successful!  |
 |                                                                                  |
-\\__________________________________________________________________________________/
-                                    \\_______/
+\__________________________________________________________________________________/
+                                    \_______/
                                     ( o   o )
-                                     \\ ~~~ /
+                                     \ ~~~ /
                                       |---|
-                                  ___/     \\___`;
+                                  ___/     \___
+                                 /             \
 
-    // Initialize Typed.js
-    const typed = new Typed('#ascii-art', {
-      strings: [asciiArt],
-      typeSpeed: 30,
-      showCursor: false,
-    });
-  </script>
+    </pre>
+  </div>
+
+  <style>
+    #ascii-art {
+      color: green;
+      font-size: 24px;
+      white-space: pre-wrap;
+      text-align: center;
+      opacity: 0;
+      animation: type 10s linear forwards;
+    }
+
+    @keyframes type {
+      from {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  </style>
 </body>
-</html>
