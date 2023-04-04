@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Type.js Example</title>
-    <link href="https://cdn.jsdelivr.net/npm/type.js@0.2.0/dist/type.min.css" rel="stylesheet" />
-  </head>
-  <body>
-    <pre id="typewriter"></pre>
-    <script src="https://cdn.jsdelivr.net/npm/type.js@0.2.0/dist/type.min.js"></script>
-    <script>
-      var typewriter = document.getElementById("typewriter");
-      var typewriterText = '|   ****************************************************************************   |\n|   ___________________________________________________________________________    |\n|   |                                                                         \\    |\n|   |    ***************************  DAY 2  *****************************     |   |\n|   |                                                                          |   |\n|   ****************************************************************************   |\n|   #                                                                          #   |\n|   #                    "Marriage is like debugging:                          #   |\n|   #           you spend most of the time finding and fixing the bugs"        #   |\n|   #                                                                          #   |\n|   ****************************************************************************   |\n|   |                                                                          |   |\n|   |   Date:        May 4, 2023                                               |   |\n|   |   Time:        11:00 AM onwards                                          |   |\n|   |   Venue:       18.5268348984126,                                         |   |\n|   |                73.74657605545909                                         |   |\n|   |   Event:       #include<main.event>                                      |   |\n|   |                                                                          |   |\n|   |   Dress Code:  Any dress that makes you look your best,                  |   |\n|   |                but please put on atleast one complete outfit :D          |   |\n|   |                                                                          |   |\n|   |   RSVP:        Join our event and add some `def` to our `class` :P       |   |\n|   |                And if you're not able to make it,                        |   |\n|   |                please raise an `exception` as soon as possible.          |   |\n|   |                We don't want to encounter any `runtime errors`!          |   |\n|   |                                                                          |   |\n|   |_________________________________________________________________________/    |\n|                                                                                  |\n|    P.S: With love as our guiding principle and your abundant support we are      |\n|    confident our merge will be conflict-free and deployment will be successful!  |\n|                                                                                  |\n\\__________________________________________________________________________________/\n                                    \\_______/\n                                    ( o   o )\n                                     \\ ~~~ /\n                                      |---|\n                                  ___/     \\___';
-      var typewriterInstance = new Typewriter(typewriter, {
-        loop: false,
-        delay: 75,
-        cursor: true,
+<head>
+  <title>ASCII Art</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+  <script>
+    window.onload = function() {
+      var asciiArt = '|   ****************************************************************************   |\n|   ___________________________________________________________________________    |\n|   |                                                                         \\    |\n|   |    ***************************  DAY 2  *****************************     |   |\n|   |                                                                          |   |\n|   ****************************************************************************   |\n|   #                                                                          #   |\n|   #                    "Marriage is like debugging:                          #   |\n|   #           you spend most of the time finding and fixing the bugs"        #   |\n|   #                                                                          #   |\n|   ****************************************************************************   |\n|   |                                                                          |   |\n|   |   Date:        May 4, 2023                                               |   |\n|   |   Time:        11:00 AM onwards                                          |   |\n|   |   Venue:       18.5268348984126,                                         |   |\n|   |                73.74657605545909                                         |   |\n|   |   Event:       #include<main.event>                                      |   |\n|   |                                                                          |   |\n|   |   Dress Code:  Any dress that makes you look your best,                  |   |\n|   |                but please put on atleast one complete outfit :D          |   |\n|   |                                                                          |   |\n|   |   RSVP:        Join our event and add some `def` to our `class` :P       |   |\n|   |                And if you\'re not able to make it,                        |   |\n|   |                please raise an `exception` as soon as possible.          |   |\n|   |                We don\'t want to encounter any `runtime errors`!          |   |\n|   |                                                                          |   |\n|   |_________________________________________________________________________/    |\n|                                                                                  |\n|    P.S: With love as our guiding principle and your abundant support we are      |\n|    confident our merge will be conflict-free and deployment will be successful!  |\n|                                                                                  |\n\\__________________________________________________________________________________/\n                                    \\_______/\n                                    ( o   o )\n                                     \\ ~~~ /\n                                      |---|\n                                  ___/     \\___\n                                 /             \\';
+      var typed = new Typed('#ascii-art', {
+        strings: [asciiArt],
+        typeSpeed: 20
       });
-
-      typewriterInstance.typeString(typewriterText).start();
-    </script>
-  </body>
+    };
+  </script>
+</head>
+<body>
+  <pre id="ascii-art"></pre>
+</body>
 </html>
