@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ASCII Art</title>
+  </head>
+  <body>
+    <pre id="ascii-art"></pre>
+
+    <script>
+      // Define the ASCII art
+      var asciiArt = [
+        "  ____",
+        " / ___|_ __ ___  _   _ _ __ ",
+        "| |   | '__/ _ \| | | | '__|",
+        "| |___| | | (_) | |_| | |   ",
+        " \____|_|  \___/ \__,_|_|   ",
+      ];
+
+      // Define the delay between each line (in milliseconds)
+      var delay = 1000;
+
+      // Get the ASCII art element
+      var asciiArtElement = document.getElementById("ascii-art");
+
+      // Print each line of the ASCII art with a delay in between
+      for (var i = 0; i < asciiArt.length; i++) {
+        setTimeout(function () {
+          asciiArtElement.innerHTML += asciiArt[i] + "\n";
+        }, i * delay);
+      }
+    </script>
+  </body>
+</html>
