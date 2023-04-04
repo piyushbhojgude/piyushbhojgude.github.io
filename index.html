@@ -1,33 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ASCII Art</title>
+    <meta charset="UTF-8" />
+    <title>ASCII Art with Typing Effect</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        font-family: monospace;
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
-    <pre id="ascii-art"></pre>
+    <div id="ascii-art"></div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typeit/7.1.3/typeit.min.js"></script>
     <script>
-      // Define the ASCII art
-      var asciiArt = [
-        "  ____",
-        " / ___|_ __ ___  _   _ _ __ ",
-        "| |   | '__/ _ \| | | | '__|",
-        "| |___| | | (_) | |_| | |   ",
-        " \____|_|  \___/ \__,_|_|   ",
-      ];
-
-      // Define the delay between each line (in milliseconds)
-      var delay = 1000;
-
-      // Get the ASCII art element
-      var asciiArtElement = document.getElementById("ascii-art");
-
-      // Print each line of the ASCII art with a delay in between
-      for (var i = 0; i < asciiArt.length; i++) {
-        setTimeout(function () {
-          asciiArtElement.innerHTML += asciiArt[i] + "\n";
-        }, i * delay);
-      }
+      new TypeIt("#ascii-art", {
+        speed: 50,
+        cursor: false,
+      })
+        .type('|   ****************************************************************************   |\n|   ___________________________________________________________________________    |\n|   |                                                                         \\    |\n|   |    ***************************  DAY 2  *****************************     |   |\n|   |                                                                          |   |\n|   ****************************************************************************   |\n|   #                                                                          #   |\n|   #                    "Marriage is like debugging:                          #   |\n|   #           you spend most of the time finding and fixing the bugs"        #   |\n|   #                                                                          #   |\n|   ****************************************************************************   |\n|   |                                                                          |   |\n|   |   Date:        May 4, 2023                                               |   |\n|   |   Time:        11:00 AM onwards                                          |   |\n|   |   Venue:       18.5268348984126,                                         |   |\n|   |                73.74657605545909                                         |   |\n|   |   Event:       #include<main.event>                                      |   |\n|   |                                                                          |   |\n|   |   Dress Code:  Any dress that makes you look your best,                  |   |\n|   |                but please put on atleast one complete outfit :D          |   |\n|   |                                                                          |   |\n|   |   RSVP:        Join our event and add some `def` to our `class` :P       |   |\n|   |                And if you're not able to make it,                        |   |\n|   |                please raise an `exception` as soon as possible.          |   |\n|   |                We don't want to encounter any `runtime errors`!          |   |\n|   |                                                                          |   |\n|   |_________________________________________________________________________/    |\n|                                                                                  |\n|    P.S: With love as our guiding principle and your abundant support we are      |\n|    confident our merge will be conflict-free and deployment will be successful!  |\n|                                                                                  |\n\\__________________________________________________________________________________/')
+        .go();
     </script>
   </body>
 </html>
